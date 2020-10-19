@@ -1,18 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:clipToPadding="false"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="ExtraText">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/imgView1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/fl_superman_foreground" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintTop_toTopOf="@id/imgView1"
+            app:layout_constraintRight_toRightOf="@id/imgView1"
+            android:text="@string/description1"    />
+        <Button
+            android:id="@+id/btnFilm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Детали..."
+            app:layout_constraintBottom_toBottomOf="@id/imgView1"
+            app:layout_constraintRight_toRightOf="@id/imgView1"/>
+
+
+        <ImageView
+            android:id="@+id/imgView2"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/imgView1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/fl_terminator_foreground" />
+
+
+        <TextView
+            android:id="@+id/txtView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintTop_toTopOf="@id/imgView2"
+            app:layout_constraintRight_toRightOf="@id/imgView2"
+            android:text="@string/description2"    />
+        <Button
+            android:id="@+id/btnFilm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Детали..."
+            app:layout_constraintBottom_toBottomOf="@id/imgView2"
+            app:layout_constraintRight_toRightOf="@id/imgView2"/>
+
+
+        <ImageView
+            android:id="@+id/imgView3"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@id/imgView2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/fl_bond_foreground"
+            />
+
+        <TextView
+            android:id="@+id/txtView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintTop_toTopOf="@id/imgView3"
+            app:layout_constraintRight_toRightOf="@id/imgView3"
+            android:text="@string/description3"    />
+        <Button
+            android:id="@+id/btnFilm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Детали..."
+            app:layout_constraintBottom_toBottomOf="@id/imgView3"
+            app:layout_constraintRight_toRightOf="@id/imgView3"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
